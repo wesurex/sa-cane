@@ -1,10 +1,10 @@
 # Sobe os containers em segundo plano
 up:
-	docker-compose -p $(PROJECT_NAME) up -d
+	docker compose up -d
 
 # Para e remove os containers, volumes e rede
 down:
-	docker-compose -p $(PROJECT_NAME) down -v
+	docker compose down 
 
 # Mata todos os containers Docker em execução no sistema
 killdb:

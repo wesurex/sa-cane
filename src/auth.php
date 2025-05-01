@@ -12,5 +12,5 @@ if ($email === $usuario_correto && $senha === $senha_correta) {
     header('Location: dashboard.php');
     exit;
 } else {
-    echo '<script>alert("E-mail ou senha inválidos!"); history.back();</script>';
+    echo '<script>alert("E-mail e/ou senha inválidos!"); history.back();</script>';
 }

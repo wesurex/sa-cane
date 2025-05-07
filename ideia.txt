@@ -1,0 +1,13 @@
+sistema de agendamento genérico
+
+- cadastrar o horário de funcionamento
+  - cadastrar horário de final de semana ou de segunda a segunda
+  - cadastrar horário de atendimento, ex: barba 15min 
+  - cadastrar profissionais
+  - cadastrar usuário - dados do usuário, endereço "busca cep", contato, gerar token de acesso unico
+  - usuário faz agendamento
+  - cadastra serviço
+  - botão do whatsapp lado inferior direito >
+  - logs de usuário
+  - mostrar lista de clientes
+  - 

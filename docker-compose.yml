@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   php:
-    image: php:8.2-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: php
     volumes:
       - ./src:/var/www/html/
@@ -16,7 +18,7 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: minha_base
+      MYSQL_DATABASE: agenda_ai
       MYSQL_USER: user
       MYSQL_PASSWORD: senha
     volumes:

@@ -25,13 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="mb-3"><label class="form-label">Telefone</label><input type="text" class="form-control" id="telefone" name="telefone" required></div>
         <div class="mb-3"><label class="form-label">Senha</label><input type="password" class="form-control" name="senha" required></div>
         <div class="row">
-          <div class="col-md-4 mb-3"><label class="form-label">CEP</label><input type="text" class="form-control" id="cep" name="cep"></div>
-          <div class="col-md-8 mb-3"><label class="form-label">Rua</label><input type="text" class="form-control" name="rua"></div>
-          <div class="col-md-4 mb-3"><label class="form-label">Número</label><input type="text" class="form-control" name="numero"></div>
-          <div class="col-md-8 mb-3"><label class="form-label">Complemento</label><input type="text" class="form-control" name="complemento"></div>
-          <div class="col-md-6 mb-3"><label class="form-label">Bairro</label><input type="text" class="form-control" name="bairro"></div>
-          <div class="col-md-4 mb-3"><label class="form-label">Cidade</label><input type="text" class="form-control" name="cidade"></div>
-          <div class="col-md-2 mb-3"><label class="form-label">UF</label><input type="text" class="form-control" name="estado" maxlength="2"></div>
+          <div class="col-md-4 mb-3"><label class="form-label">CEP</label><input type="text" class="form-control" id="cep" name="cep" required></div>
+          <div class="col-md-8 mb-3"><label class="form-label">Rua</label><input type="text" class="form-control" name="rua" required></div>
+          <div class="col-md-4 mb-3"><label class="form-label">Número</label><input type="text" class="form-control" name="numero" required></div>
+          <div class="col-md-8 mb-3"><label class="form-label">Complemento</label><input type="text" class="form-control" name="complemento" required></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Bairro</label><input type="text" class="form-control" name="bairro" required></div>
+          <div class="col-md-4 mb-3"><label class="form-label">Cidade</label><input type="text" class="form-control" name="cidade" required></div>
+          <div class="col-md-2 mb-3"><label class="form-label">UF</label><input type="text" class="form-control" name="estado" maxlength="2" required></div>
         </div>
         <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
       </form>

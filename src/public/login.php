@@ -1,13 +1,13 @@
 <?php
 session_start();
 require_once '../config/db.php';
-require_once '../controllers/ClienteController.php';
+require_once '../controllers/AuthController.php';
 
 $erro = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $clienteController = new ClienteController($pdo);
-    $erro = $clienteController->login($_POST);
+    $authController = new AuthController($pdo);
+    $erro = $authController->login($_POST);
 }
 ?>
 <!DOCTYPE html>
@@ -25,11 +25,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="alert alert-danger"><?= $erro ?></div>
     <?php endif; ?>
     <form method="POST">
-      <div class="mb-3"><label class="form-label">E-mail</label><input type="email" class="form-control" name="email" required></div>
-      <div class="mb-3"><label class="form-label">Senha</label><input type="password" class="form-control" name="senha" required></div>
+      <div class="mb-3">
+        <label class="form-label">E-mail</label>
+        <input type="email" class="form-control" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Senha</label>
+        <input type="password" class="form-control" name="senha" required>
+      </div>
       <button type="submit" class="btn btn-primary w-100">Entrar</button>
+      
     </form>
-    <div class="text-center mt-3"><a href="recuperar.php">Esqueci minha senha</a></div>
+    <div class="text-center mt-3">
+      <a href="recuperar.php">Esqueci minha senha</a>
+    </div>
+    <hr>
+    <div class="text-center">
+      <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se</a></p>
   </div>
 </div>
 </body>

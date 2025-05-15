@@ -10,4 +10,3 @@ sistema de agendamento genérico
   - botão do whatsapp lado inferior direito >
   - logs de usuário
   - mostrar lista de clientes
-  - 

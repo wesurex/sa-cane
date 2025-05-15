@@ -6,10 +6,12 @@ class Cliente {
         $this->pdo = $pdo;
     }
 
-    // Cadastrar novo cliente
+    // Cadastrar novo cliente (com tipo)
     public function criar($dados) {
-        $sql = "INSERT INTO clientes (nome, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado)
-                VALUES (:nome, :email, :telefone, :senha, :cep, :rua, :numero, :complemento, :bairro, :cidade, :estado)";
+        $sql = "INSERT INTO clientes 
+                (nome, email, telefone, senha, cep, rua, numero, complemento, bairro, cidade, estado, tipo)
+                VALUES
+                (:nome, :email, :telefone, :senha, :cep, :rua, :numero, :complemento, :bairro, :cidade, :estado, :tipo)";
         
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
@@ -23,7 +25,8 @@ class Cliente {
             ':complemento' => $dados['complemento'],
             ':bairro' => $dados['bairro'],
             ':cidade' => $dados['cidade'],
-            ':estado' => $dados['estado']
+            ':estado' => $dados['estado'],
+            ':tipo' => $dados['tipo'] ?? 'cliente'  // caso não venha, padrão cliente
         ]);
     }
 

@@ -3,8 +3,12 @@ require_once '../config/db.php';
 require_once '../controllers/ClienteController.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Força o tipo 'cliente' no array enviado ao controller
+    $dados = $_POST;
+    $dados['tipo'] = 'cliente';
+
     $clienteController = new ClienteController($pdo);
-    $clienteController->registrar($_POST);
+    $clienteController->registrar($dados);
 }
 ?>
 <!DOCTYPE html>
